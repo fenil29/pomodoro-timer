@@ -9,7 +9,7 @@ import About from "./About.jsx";
 import Setting from "./Setting.jsx";
 import NavButton from "./NavButton.jsx";
 import NotFound404 from "./NotFound404.jsx";
-import { HashRouter as Router, Route,Switch} from "react-router-dom";
+import { BrowserRouter as Router, Route,Switch} from "react-router-dom";
 
 export class Main extends Component {
   state = {
