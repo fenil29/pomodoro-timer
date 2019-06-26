@@ -100,11 +100,11 @@ export class CircularSelector extends Component {
     const { value } = this.state;
     return (
       <div>
-        {localStorage.getItem("started") == "break" ? (
+        {/* {localStorage.getItem("started") == "break" ? (
           <Redirect to="/break" />
         ) : (
           <React.Fragment />
-        )}
+        )} */}
         {!this.state.selector ? (
           <React.Fragment>
             <Timer

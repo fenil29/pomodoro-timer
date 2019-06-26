@@ -9,7 +9,12 @@ import About from "./About.jsx";
 import Setting from "./Setting.jsx";
 import NavButton from "./NavButton.jsx";
 import NotFound404 from "./NotFound404.jsx";
-import { BrowserRouter as Router, Route,Switch} from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+  Redirect
+} from "react-router-dom";
 
 export class Main extends Component {
   state = {
@@ -103,40 +108,45 @@ export class Main extends Component {
             )}
           />
           <Switch>
-          <Route
-            exact
-            path="/"
-            render={props => (
-              <CircularSelector
-                currentValue={this.state.PomodoroTimeData * 60 * 1000}
-                maxValue={this.state.PomodoroTimeData * 2 * 60 * 1000}
-                switchChecked={this.state.switchChecked}
-                handleStart={this.handleStart}
-                handleStop={this.handleStop}
-                //   titleValue={this.props.titleValue}
-              />
-            )}
-          />
-          <Route
-            exact
-            path="/break"
-            render={props => (
-              <CircularSelector2
-                currentValue={this.state.BreakTimeData * 60 * 1000}
-                maxValue={this.state.BreakTimeData * 2 * 60 * 1000}
-                switchChecked={this.state.switchChecked}
-                handleStart={this.handleStart}
-                handleStop={this.handleStop}
-                //   titleValue={this.props.titleValue}
-              />
-            )}
-          />
-          <Route exact path="/time" render={props => <Time />} />
-          <Route
-            render={props => (
-              <NotFound404/>
-            )}
-          /></Switch>
+            <Route
+              exact
+              path="/"
+              render={props =>
+                this.state.started == "break" ? (
+                  <Redirect to="/break" />
+                ) : (
+                  <CircularSelector
+                    currentValue={this.state.PomodoroTimeData * 60 * 1000}
+                    maxValue={this.state.PomodoroTimeData * 2 * 60 * 1000}
+                    switchChecked={this.state.switchChecked}
+                    handleStart={this.handleStart}
+                    handleStop={this.handleStop}
+                    //   titleValue={this.props.titleValue}
+                  />
+                )
+              }
+            />
+            <Route
+              exact
+              path="/break"
+              render={props =>
+                this.state.started == "pomodoro" ? (
+                  <Redirect to="/" />
+                ) : (
+                  <CircularSelector2
+                    currentValue={this.state.BreakTimeData * 60 * 1000}
+                    maxValue={this.state.BreakTimeData * 2 * 60 * 1000}
+                    switchChecked={this.state.switchChecked}
+                    handleStart={this.handleStart}
+                    handleStop={this.handleStop}
+                    //   titleValue={this.props.titleValue}
+                  />
+                )
+              }
+            />
+            <Route exact path="/time" render={props => <Time />} />
+            <Route render={props => <NotFound404 />} />
+          </Switch>
         </div>
       </Router>
     );
