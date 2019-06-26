@@ -1,0 +1,72 @@
+.circular-selector svg {
+  width: 100%;
+  height: 100%;
+}
+#rotate svg {
+  transform: rotate(180deg);
+}
+#circular-selector {
+}
+#circular-selector text {
+}
+#time {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #02c0e8;
+  font-size: 85px;
+}
+#time-completed {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #02c0e8;
+  font-size: 40px;
+}
+#outer-div {
+  max-width: 400px;
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  position: relative;
+}
+#button-div {
+  max-width: 450px;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+.selector-button {
+  background-color: #01d8dd;
+  border-width: 0px;
+  padding: 15px;
+  max-width: 150px;
+  width: 40%;
+  margin: 10px;
+  border-radius: 30px;
+  color: white;
+}
+.selector-button:active {
+  outline: 0;
+}
+.selector-button:focus {
+  outline: 0;
+}
+.start-button {
+  float: left;
+}
+.stop-button {
+  float: right;
+}
+@media (max-width: 350px) {
+  .selector-button {
+  }
+}
+@media only screen and (min-device-width: 380px) and (max-device-width: 440px) {
+  .selector-button {
+  }
+}

@@ -1,0 +1,68 @@
+#nav-button-outer-div{
+    max-width: 500px;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#nav-button-div{
+  text-align: center;
+}
+.nav-button{
+    background-color: #01d8dd;
+    border-width: 0px;
+    padding: 10px;
+    width: 33%;
+    color: white;    
+}
+.nav-button-selected button{
+    background-color: #03c2c5;
+     
+}
+.nav-button-selected-js{
+    background-color: #03c2c5;
+     
+}
+.nav-button:active{
+    outline:0;
+}
+.nav-button:focus{
+    outline:0;
+}
+.nav-button:hover{
+    background-color: #03c2c5;
+    
+}
+#pomodoro-button{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+#break-button{
+}
+#time-button{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+  /* @media only screen 
+  and (min-device-width : 380px) 
+  and (max-device-width : 540px) {
+    .nav-button {
+        width: 100px;
+      }
+  }
+  @media only screen 
+  and (min-device-width : 270px) 
+  and (max-device-width : 380px) {
+    .nav-button {
+        width: 70px;
+      }
+  }
+  @media only screen 
+  and (min-device-width : 0) 
+  and (max-device-width : 270px) {
+    .nav-button {
+        width: 50px;
+      }
+  } */
