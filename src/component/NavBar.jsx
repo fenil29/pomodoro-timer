@@ -16,7 +16,7 @@ export class NavBar extends Component {
           id="main-nav-bar"
         >
           <Container>
-            <Navbar.Brand href="#home">Pomodoro Timer</Navbar.Brand>
+            <Navbar.Brand>Pomodoro Timer</Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto" />
